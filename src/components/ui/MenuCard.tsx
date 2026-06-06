@@ -44,16 +44,16 @@ export default function MenuCard({ item, index }: MenuCardProps) {
     >
       <div className={cn('h-1.5 w-full', topBarColor(item))} aria-hidden="true" />
 
-      <div className="p-5 flex flex-col gap-3 flex-1">
-        <div className="flex items-start justify-between gap-3">
-          <div className="flex items-center gap-3">
+      <div className="p-4 sm:p-5 flex flex-col gap-3 flex-1">
+        <div className="flex items-start justify-between gap-2 sm:gap-3">
+          <div className="flex items-center gap-2 sm:gap-3 min-w-0">
             {isBowl && (
-              <div className="w-11 h-11 rounded-xl bg-[#FAF7F0] border border-[#E8D5B7]/60 flex items-center justify-center text-2xl shrink-0 group-hover:scale-105 transition-transform duration-200">
+              <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-[#FAF7F0] border border-[#E8D5B7]/60 flex items-center justify-center text-xl sm:text-2xl shrink-0 group-hover:scale-105 transition-transform duration-200">
                 <span role="img" aria-label={item.name}>{item.emoji}</span>
               </div>
             )}
-            <div>
-              <h3 className="font-display font-bold text-[#1A1A1A] text-base leading-tight">{item.name}</h3>
+            <div className="min-w-0">
+              <h3 className="font-display font-bold text-[#1A1A1A] text-sm sm:text-base leading-tight truncate">{item.name}</h3>
               {isBowl && (
                 <div className="flex items-center gap-1.5 mt-0.5">
                   {isArma && (
@@ -73,8 +73,8 @@ export default function MenuCard({ item, index }: MenuCardProps) {
             {item.pricePrefix && (
               <span className="block text-[10px] text-[#2D2D2D]/40 font-medium leading-none mb-0.5">{item.pricePrefix}</span>
             )}
-            <span className="text-xl font-bold text-[#0AAFF2] font-display">${item.price}</span>
-            <span className="text-xs text-[#2D2D2D]/40 ml-0.5">MXN</span>
+            <span className="text-lg sm:text-xl font-bold text-[#0AAFF2] font-display">${item.price}</span>
+            <span className="text-[10px] sm:text-xs text-[#2D2D2D]/40 ml-0.5">MXN</span>
           </div>
         </div>
 

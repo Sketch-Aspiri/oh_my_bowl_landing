@@ -20,8 +20,8 @@ interface IngredientData {
   radius: number
 }
 
-const RING_R = 160
-const BOWL_SIZE = 150
+const RING_R = 120
+const BOWL_SIZE = 120
 
 function IngredientParticleWrapper({ expansion, item }: { expansion: MotionValue<number>; item: IngredientData }) {
   const x = useTransform(expansion, (e: number) => Math.cos(item.angle) * item.radius * e)
@@ -49,7 +49,7 @@ export default function BowlAnimation() {
     offset: ['start start', 'end start'],
   })
 
-  const expansion = useTransform(scrollYProgress, [0, 0.35, 0.75], [1, 0.5, 0])
+  const expansion = useTransform(scrollYProgress, [0, 0.25, 0.55], [1, 0.5, 0])
 
   const headlineOpacity = useTransform(scrollYProgress, [0, 0.15], [1, 0])
 
@@ -65,7 +65,7 @@ export default function BowlAnimation() {
   return (
     <section
       ref={sectionRef}
-      className="relative h-[250vh] bg-[#FAF7F0]"
+      className="relative h-[150vh] sm:h-[250vh] bg-[#FAF7F0]"
     >
       <div
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full opacity-[0.035] pointer-events-none"
@@ -74,13 +74,13 @@ export default function BowlAnimation() {
       />
 
       <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden">
-        <div className="relative w-full max-w-3xl mx-auto flex items-center justify-center min-h-[460px]">
+        <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-3xl mx-auto flex items-center justify-center min-h-[320px] sm:min-h-[460px]">
 
           <motion.p
             style={{ opacity: headlineOpacity }}
-            className="absolute top-6 sm:top-10 left-1/2 -translate-x-1/2 text-center whitespace-nowrap pointer-events-none"
+            className="absolute top-6 sm:top-10 left-1/2 -translate-x-1/2 text-center pointer-events-none"
           >
-            <span className="text-xs sm:text-sm font-semibold uppercase tracking-[0.2em] text-[#0AAFF2]">
+            <span className="text-[10px] sm:text-sm font-semibold uppercase tracking-[0.2em] text-[#0AAFF2]">
               Descubre nuestros ingredientes
             </span>
           </motion.p>

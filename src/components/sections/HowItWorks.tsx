@@ -117,11 +117,11 @@ export default function HowItWorks() {
         >
           <p style={{ fontFamily: 'Caveat, cursive', fontSize: '1.1rem', letterSpacing: '0.1em' }}
             className="text-[#D4A017] mb-3">Así de fácil</p>
-          <h2 className="font-display text-4xl sm:text-5xl font-bold text-white mb-4">Arma tu Bowl en 4 pasos</h2>
+          <h2 className="font-display text-4xl sm:text-5xl font-bold text-white mb-4">Arma tu Bowl en 6 pasos</h2>
           <p className="text-white/55 max-w-lg mx-auto text-lg leading-relaxed">Simple, rápido y siempre delicioso.</p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6 lg:gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 sm:gap-6 lg:gap-4">
           {steps.map((step, i) => (
             <motion.div key={step.number}
               initial={{ opacity: 0, y: 32 }} animate={isInView ? { opacity: 1, y: 0 } : {}}

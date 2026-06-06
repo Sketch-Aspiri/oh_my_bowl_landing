@@ -40,7 +40,7 @@ export default function Navbar() {
             : 'bg-transparent'
         )}
       >
-        <nav className="max-w-7xl mx-auto px-5 sm:px-8 flex items-center justify-between h-16 sm:h-20">
+        <nav className="max-w-7xl mx-auto px-4 sm:px-8 flex items-center justify-between h-14 sm:h-20">
           {/* Logo */}
           <a
             href="#hero"

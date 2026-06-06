@@ -84,10 +84,10 @@ export default function Contact() {
             className="flex flex-col gap-6"
           >
             {/* Dirección */}
-            <div className="bg-white rounded-2xl border border-[#E8D5B7] p-6 flex flex-col gap-4">
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-[#0AAFF2]/10 border border-[#0AAFF2]/20 flex items-center justify-center shrink-0 mt-0.5">
-                  <MapPin size={18} className="text-[#0AAFF2]" aria-hidden="true" />
+            <div className="bg-white rounded-2xl border border-[#E8D5B7] p-5 sm:p-6 flex flex-col gap-4">
+              <div className="flex items-start gap-3 sm:gap-4">
+                <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#0AAFF2]/10 border border-[#0AAFF2]/20 flex items-center justify-center shrink-0 mt-0.5">
+                  <MapPin size={16} className="text-[#0AAFF2]" aria-hidden="true" />
                 </div>
                 <div>
                   <h3 className="font-display font-bold text-[#1A1A1A] text-lg mb-1">Dirección</h3>
@@ -106,10 +106,10 @@ export default function Contact() {
             </div>
 
             {/* Horarios */}
-            <div className="bg-white rounded-2xl border border-[#E8D5B7] p-6">
+            <div className="bg-white rounded-2xl border border-[#E8D5B7] p-5 sm:p-6">
               <div className="flex items-center gap-3 mb-5">
-                <div className="w-10 h-10 rounded-xl bg-[#1B5E73]/10 border border-[#1B5E73]/20 flex items-center justify-center shrink-0">
-                  <Clock size={18} className="text-[#1B5E73]" aria-hidden="true" />
+                <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#1B5E73]/10 border border-[#1B5E73]/20 flex items-center justify-center shrink-0">
+                  <Clock size={16} className="text-[#1B5E73]" aria-hidden="true" />
                 </div>
                 <h3 className="font-display font-bold text-[#1A1A1A] text-lg">Horarios</h3>
               </div>
@@ -143,7 +143,7 @@ export default function Contact() {
             </div>
 
             {/* Redes sociales */}
-            <div className="bg-white rounded-2xl border border-[#E8D5B7] p-6">
+            <div className="bg-white rounded-2xl border border-[#E8D5B7] p-5 sm:p-6">
               <h3 className="font-display font-bold text-[#1A1A1A] text-lg mb-4">Síguenos</h3>
               <div className="flex flex-col gap-3">
                 <a

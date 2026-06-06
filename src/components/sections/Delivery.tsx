@@ -115,11 +115,11 @@ export default function Delivery() {
                 whileHover={{ y: -6, transition: { duration: 0.2 } }}
                 className="group relative flex flex-col bg-white rounded-2xl border border-[#E8D5B7] shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden cursor-pointer"
               >
-                <div className={`${platform.bg} px-6 py-8 flex items-center justify-center`}>
+                <div className={`${platform.bg} px-4 sm:px-6 py-6 sm:py-8 flex items-center justify-center`}>
                   <Logo />
                 </div>
 
-                <div className="p-5 flex flex-col gap-3 flex-1">
+                <div className="p-4 sm:p-5 flex flex-col gap-3 flex-1">
                   <div className="flex items-start justify-between gap-2">
                     <h3 className="font-display font-bold text-[#1A1A1A] text-lg">
                       {platform.name}

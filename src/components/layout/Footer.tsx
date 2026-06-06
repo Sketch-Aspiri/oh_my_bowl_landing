@@ -28,7 +28,7 @@ export default function Footer() {
       />
 
       <div className="max-w-7xl mx-auto px-5 sm:px-8 pt-16 pb-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-white/8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 pb-12 border-b border-white/8">
 
           {/* Brand */}
           <div className="lg:col-span-1 space-y-4">

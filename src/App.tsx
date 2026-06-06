@@ -1,6 +1,5 @@
 import Navbar from './components/layout/Navbar'
 import Hero from './components/sections/Hero'
-import BowlAnimation from './components/sections/BowlAnimation'
 import About from './components/sections/About'
 import MenuSection from './components/sections/MenuSection'
 import HowItWorks from './components/sections/HowItWorks'
@@ -16,7 +15,6 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
-        <BowlAnimation />
         <About />
         <MenuSection />
         <HowItWorks />

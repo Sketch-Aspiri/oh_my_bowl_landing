@@ -104,18 +104,18 @@ export default function BowlBuilder() {
           {!done ? (
             <motion.div key="builder" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
               {/* Stepper */}
-              <div className="flex items-center justify-center gap-0 mb-10 overflow-x-auto pb-2">
+              <div className="flex items-center justify-start sm:justify-center gap-0 mb-10 overflow-x-auto pb-2 -mx-5 px-5 sm:mx-0 sm:px-0">
                 {STEPS.map((s, i) => (
                   <div key={s.id} className="flex items-center shrink-0">
                     <button onClick={() => i < step && setStep(i)} disabled={i > step}
                       className={cn('flex flex-col items-center gap-1 cursor-pointer disabled:cursor-default')}>
                       <div className={cn(
-                        'w-9 h-9 rounded-full flex items-center justify-center text-sm font-bold transition-all duration-300',
+                        'w-8 h-8 sm:w-9 sm:h-9 rounded-full flex items-center justify-center text-xs sm:text-sm font-bold transition-all duration-300',
                         i < step  && 'bg-[#2D5016] text-white',
                         i === step && 'text-white shadow-lg scale-110',
                         i > step  && 'bg-[#E8D5B7] text-[#2D2D2D]/40',
                       )} style={i === step ? { backgroundColor: color } : undefined}>
-                        {i < step ? <Check size={16} /> : i + 1}
+                        {i < step ? <Check size={14} /> : i + 1}
                       </div>
                       <span className={cn('text-[10px] font-semibold uppercase tracking-wide hidden sm:block',
                         i === step ? 'text-[#1A1A1A]' : 'text-[#2D2D2D]/40')}>
@@ -123,7 +123,7 @@ export default function BowlBuilder() {
                       </span>
                     </button>
                     {i < STEPS.length - 1 && (
-                      <div className={cn('w-8 sm:w-12 h-px mx-1 transition-colors duration-300',
+                      <div className={cn('w-6 sm:w-12 h-px mx-0.5 sm:mx-1 transition-colors duration-300',
                         i < step ? 'bg-[#2D5016]' : 'bg-[#E8D5B7]')} aria-hidden="true" />
                     )}
                   </div>
@@ -149,14 +149,14 @@ export default function BowlBuilder() {
                       </span>
                     </div>
                   </div>
-                  <div className="p-5 sm:p-6">
-                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
+                  <div className="p-4 sm:p-6">
+                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
                       {options.map((opt) => {
                         const isSelected = selected.some((s) => s.id === opt.id)
                         return (
                           <button key={opt.id} onClick={() => toggle(opt)}
                             className={cn(
-                              'relative flex items-center gap-2.5 p-3 rounded-xl border text-left transition-all duration-150 cursor-pointer',
+                              'relative flex items-center gap-2.5 p-3 sm:p-3 rounded-xl border text-left transition-all duration-150 cursor-pointer min-h-[52px]',
                               isSelected ? 'border-2 text-[#1A1A1A] shadow-sm' : 'border-[#E8D5B7] bg-[#FAF7F0]/60 text-[#2D2D2D]/70 hover:bg-white'
                             )}
                             style={isSelected ? { borderColor: color, backgroundColor: `${color}08` } : undefined}
@@ -195,15 +195,15 @@ export default function BowlBuilder() {
               )}
 
               {/* Navegación */}
-              <div className="flex items-center justify-between mt-6">
+              <div className="flex items-center justify-between mt-6 gap-3">
                 <button onClick={() => step > 0 ? setStep(step - 1) : undefined} disabled={step === 0}
-                  className="flex items-center gap-2 px-5 py-3 rounded-full border border-[#E8D5B7] text-[#2D2D2D]/60 text-sm font-medium hover:bg-white hover:text-[#1A1A1A] transition-all duration-150 cursor-pointer disabled:opacity-30 disabled:cursor-default">
-                  <ChevronLeft size={16} /> Anterior
+                  className="flex items-center gap-2 px-4 sm:px-5 py-3 rounded-full border border-[#E8D5B7] text-[#2D2D2D]/60 text-sm font-medium hover:bg-white hover:text-[#1A1A1A] transition-all duration-150 cursor-pointer disabled:opacity-30 disabled:cursor-default">
+                  <ChevronLeft size={16} /> <span className="hidden sm:inline">Anterior</span>
                 </button>
                 <button onClick={next} disabled={!canAdvance()}
-                  className="flex items-center gap-2 px-7 py-3 rounded-full text-white text-sm font-semibold shadow-md transition-all duration-150 cursor-pointer disabled:opacity-40 disabled:cursor-default"
+                  className="flex items-center gap-2 px-5 sm:px-7 py-3 rounded-full text-white text-sm font-semibold shadow-md transition-all duration-150 cursor-pointer disabled:opacity-40 disabled:cursor-default"
                   style={{ backgroundColor: canAdvance() ? color : '#E8D5B7' }}>
-                  {step === STEPS.length - 1 ? <><ShoppingBag size={16} /> Ver mi bowl</> : <>Siguiente <ChevronRight size={16} /></>}
+                  {step === STEPS.length - 1 ? <><ShoppingBag size={16} /> Ver mi bowl</> : <><span className="hidden sm:inline">Siguiente</span><ChevronRight size={16} /></>}
                 </button>
               </div>
             </motion.div>
@@ -217,7 +217,7 @@ export default function BowlBuilder() {
                 <h3 className="font-display font-bold text-2xl text-[#1A1A1A]">Tu Combinación Perfecta</h3>
               </div>
               <div className="p-6 sm:p-8">
-                <div className="grid sm:grid-cols-2 gap-4 mb-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
                   {STEPS.map((s, i) => {
                     const items = sel[s.key]
                     if (items.length === 0) return null

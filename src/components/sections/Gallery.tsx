@@ -92,30 +92,30 @@ export default function Gallery() {
             </h2>
           </div>
 
-          <div className="flex gap-3">
+          <div className="flex gap-2 sm:gap-3">
             <a
               href="https://www.facebook.com/p/Oh-My-Bowl-61559907120542/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-5 py-2.5 rounded-full border border-[#E8D5B7] bg-white text-[#2D2D2D]/70 text-sm font-medium hover:border-[#0AAFF2]/40 hover:text-[#0AAFF2] transition-all duration-200 cursor-pointer"
+              className="flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-5 py-2.5 rounded-full border border-[#E8D5B7] bg-white text-[#2D2D2D]/70 text-xs sm:text-sm font-medium hover:border-[#0AAFF2]/40 hover:text-[#0AAFF2] transition-all duration-200 cursor-pointer"
             >
-              <Facebook size={15} aria-hidden="true" />
-              Facebook
+              <Facebook size={14} aria-hidden="true" />
+              <span className="hidden sm:inline">Facebook</span>
             </a>
             <a
               href="https://www.facebook.com/p/Oh-My-Bowl-61559907120542/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-5 py-2.5 rounded-full border border-[#E8D5B7] bg-white text-[#2D2D2D]/70 text-sm font-medium hover:border-[#0AAFF2]/40 hover:text-[#0AAFF2] transition-all duration-200 cursor-pointer"
+              className="flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-5 py-2.5 rounded-full border border-[#E8D5B7] bg-white text-[#2D2D2D]/70 text-xs sm:text-sm font-medium hover:border-[#0AAFF2]/40 hover:text-[#0AAFF2] transition-all duration-200 cursor-pointer"
             >
-              <Instagram size={15} aria-hidden="true" />
-              Instagram
+              <Instagram size={14} aria-hidden="true" />
+              <span className="hidden sm:inline">Instagram</span>
             </a>
           </div>
         </motion.div>
 
         {/* Masonry grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 auto-rows-[180px]">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-3 auto-rows-[130px] sm:auto-rows-[180px]">
           {galleryItems.map((item, i) => (
             <motion.button
               key={item.id}

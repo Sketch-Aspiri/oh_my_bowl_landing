@@ -63,10 +63,10 @@ export default function Hero() {
           className="absolute -bottom-24 -left-24 w-72 h-72 rounded-full border border-white/8"
         />
 
-        <FloatingElement delay={0}   x="15%" y="25%" size={8}  color="#D4A017" opacity={0.4} />
-        <FloatingElement delay={1.5} x="75%" y="70%" size={6}  color="#FAF7F0" opacity={0.25} />
-        <FloatingElement delay={3}   x="85%" y="30%" size={10} color="#D4A017" opacity={0.15} />
-        <FloatingElement delay={0.8} x="25%" y="75%" size={5}  color="#FAF7F0" opacity={0.2} />
+        <FloatingElement delay={0}   x="10%" y="20%" size={5}  color="#D4A017" opacity={0.35} />
+        <FloatingElement delay={1.5} x="80%" y="70%" size={4}  color="#FAF7F0" opacity={0.2} />
+        <FloatingElement delay={3}   x="85%" y="25%" size={6}  color="#D4A017" opacity={0.12} />
+        <FloatingElement delay={0.8} x="20%" y="75%" size={3}  color="#FAF7F0" opacity={0.15} />
       </div>
 
       {/* Contenido */}
@@ -85,7 +85,7 @@ export default function Hero() {
             <img
               src="/logo.jpg"
               alt="Oh My Bowl"
-              className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl object-cover shadow-xl border-4 border-white/20"
+              className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-2xl object-cover shadow-xl border-4 border-white/20"
             />
           </motion.div>
 
