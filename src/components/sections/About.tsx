@@ -33,7 +33,7 @@ const features = [
 const stats = [
   { target: 6,  suffix: '',  label: 'Proteínas',     duration: 1200 },
   { target: 10, suffix: '+', label: 'Vegetales',     duration: 1400 },
-  { target: 4,  suffix: '',  label: 'Aderezos',      duration: 1000 },
+  { target: 10, suffix: '+', label: 'Aderezos',      duration: 1000 },
   { target: -1, suffix: '∞', label: 'Combinaciones', duration: 0    },
 ]
 
