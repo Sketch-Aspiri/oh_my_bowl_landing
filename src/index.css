@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@theme {
+  /* Paleta Oh My Bowl — azul de marca */
+  --color-cream: #FAF7F0;
+  --color-sand: #E8D5B7;
+  --color-brand: #0AAFF2;
+  --color-brand-dark: #0891CC;
+  --color-brand-light: #38C5FF;
+  /* aliases de compatibilidad */
+  --color-coral: #0AAFF2;
+  --color-coral-dark: #0891CC;
+  --color-coral-light: #38C5FF;
+  --color-ocean: #1B5E73;
+  --color-ocean-dark: #0F3D4D;
+  --color-ocean-light: #2A7A93;
+  --color-forest: #2D5016;
+  --color-forest-light: #3D6B1F;
+  --color-gold: #D4A017;
+  --color-gold-light: #E8B82A;
+  --color-charcoal: #1A1A1A;
+  --color-charcoal-soft: #2D2D2D;
+
+  /* Tipografía */
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-body: "DM Sans", system-ui, sans-serif;
+  --font-accent: "Caveat", cursive;
+
+  /* Espaciados extra */
+  --spacing-18: 4.5rem;
+  --spacing-22: 5.5rem;
+  --spacing-88: 22rem;
+  --spacing-100: 25rem;
+  --spacing-112: 28rem;
+  --spacing-128: 32rem;
+
+  /* Border radius */
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
+  --radius-4xl: 2rem;
+}
+
+/* Reset y base */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-cream);
+  color: var(--color-charcoal);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  line-height: 1.15;
+}
+
+/* Smooth scroll con respeto a preferencias */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Selección personalizada */
+::selection {
+  background-color: var(--color-coral);
+  color: white;
+}
+
+/* Scrollbar custom */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-cream);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-sand);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-coral);
+}
